@@ -22,6 +22,7 @@ public class SubscriptionService {
     private final CreateSubscriptionValidator createSubscriptionValidator;
     private final Clock clock;
 
+
     public Subscription upsert(CreateSubscriptionDto dto) {
         var validationResult = createSubscriptionValidator.validate(dto);
         if (validationResult.hasErrors()) {
